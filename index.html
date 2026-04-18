@@ -1279,6 +1279,60 @@ section.maroon .lede, section.dark .lede { color: rgba(255,255,255,0.85); }
       <p style="margin-top: 14px; font-size: 13px; color: var(--muted); font-style: italic;">Both modes supported in the same grant. Some activities may be yes/no while others track numbers — configurable per activity.</p>
     </div>
 
+    <!-- Task Management Module deep-dive -->
+    <div style="margin-top: 36px; padding: 32px 30px; background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow);">
+      <span class="eyebrow" style="background: rgba(139, 26, 26, 0.1); color: var(--maroon);">Flagship · Task Management Module</span>
+      <h3 style="font-size: 24px; margin-top: 4px;">A standalone module for everything that isn't in the Work Plan.</h3>
+      <p style="font-size: 15px; color: var(--ink-soft); line-height: 1.7; margin: 10px 0 20px; max-width: 860px;">
+        Task Management lives on the main navigation — outside any specific project. Use it for ad-hoc asks, cross-team coordination, and the thousand small things a grant team handles every day. Create a task, assign it to a CSR team member or an external NGO partner, set a due date, track it to completion.
+      </p>
+
+      <!-- Layer diagram: Task Mgmt → Work Plan is a subset -->
+      <div style="background: var(--tint); border-radius: 10px; padding: 22px 24px; margin-bottom: 22px;">
+        <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 12px;">How it relates to the Work Plan</div>
+        <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center;">
+          <div style="padding: 16px 18px; background: #fff; border: 1px solid var(--border); border-radius: 8px;">
+            <strong style="color: var(--maroon); font-size: 15px;">Task Management (broader)</strong>
+            <p style="font-size: 13px; color: var(--muted); margin-top: 4px; line-height: 1.5;">Any task — inside or outside a project. Ad-hoc asks, internal coordination, external requests.</p>
+          </div>
+          <div style="color: var(--orange); font-size: 18px; font-weight: 700; text-align: center;">⊃</div>
+          <div style="padding: 16px 18px; background: #fff; border: 1px solid var(--border); border-radius: 8px;">
+            <strong style="color: var(--maroon); font-size: 15px;">Work Plan (a subset)</strong>
+            <p style="font-size: 13px; color: var(--muted); margin-top: 4px; line-height: 1.5;">Pre-planned, project-scoped tasks auto-generated from the approved work plan with due dates.</p>
+          </div>
+        </div>
+        <p style="margin-top: 14px; font-size: 13px; color: var(--muted); font-style: italic; text-align: center;">Work Plan tasks appear inside the project. Ad-hoc tasks live in the standalone Task Management module. Same engine, two surfaces.</p>
+      </div>
+
+      <!-- Task features grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+        <div style="padding: 16px 18px; background: var(--tint); border-radius: 8px;">
+          <h4 style="color: var(--ink); font-size: 14px; margin-bottom: 4px;">✍ Create &amp; Assign</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Create a task, assign to an internal CSR team member or an external NGO contact. Think: "send me the photos from last week's event," "share the revised budget."</p>
+        </div>
+        <div style="padding: 16px 18px; background: var(--tint); border-radius: 8px;">
+          <h4 style="color: var(--ink); font-size: 14px; margin-bottom: 4px;">👤 Primary Owner + Observers</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">One accountable owner on every task. Add observers who get updates without the execution burden.</p>
+        </div>
+        <div style="padding: 16px 18px; background: var(--tint); border-radius: 8px;">
+          <h4 style="color: var(--ink); font-size: 14px; margin-bottom: 4px;">📅 Due Dates &amp; Reminders</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Due dates with automated reminders ahead of time and on the day. Escalations if missed.</p>
+        </div>
+        <div style="padding: 16px 18px; background: var(--tint); border-radius: 8px;">
+          <h4 style="color: var(--ink); font-size: 14px; margin-bottom: 4px;">🎯 Status &amp; Completion</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Track open / in progress / on hold / completed / overdue. Completion status with date of completion. Attach evidence files, links, photos.</p>
+        </div>
+        <div style="padding: 16px 18px; background: var(--tint); border-radius: 8px;">
+          <h4 style="color: var(--ink); font-size: 14px; margin-bottom: 4px;">🔗 Project-Linked or Ad-Hoc</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Tag a task to a project, grant, partner, or none of the above. Filter the task board by any combination.</p>
+        </div>
+        <div style="padding: 16px 18px; background: var(--tint); border-radius: 8px;">
+          <h4 style="color: var(--ink); font-size: 14px; margin-bottom: 4px;">📊 Cross-Team Visibility</h4>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">One unified task board across internal CSR team + NGO partners. No more "is it done?" emails.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="feature-grid" style="margin-top: 40px;">
       <div class="feature-card">
         <div class="icon">📑</div>
@@ -1304,11 +1358,6 @@ section.maroon .lede, section.dark .lede { color: rgba(255,255,255,0.85); }
         <div class="icon">🔔</div>
         <h4>Reminders &amp; Escalations</h4>
         <p>Automated email + in-app notifications. Configurable escalation paths when reports are missed. Role-specific routing.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">✅</div>
-        <h4>Task Management</h4>
-        <p>Slack-style task management — cross-project and ad-hoc. Assign to individuals or groups, attach evidence of completion, track overdue / delayed / on-time.</p>
       </div>
     </div>
   </div>
