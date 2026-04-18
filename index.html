@@ -263,6 +263,52 @@ details summary::-webkit-details-marker { display: none; }
 details summary::before { content: '▸'; font-size: 10px; display: inline-block; transition: transform 0.15s; margin-right: 6px; }
 details[open] summary::before { transform: rotate(90deg); }
 details summary:hover { color: var(--maroon) !important; }
+
+/* Client logo grid */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-top: 36px;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo-tile {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  transition: all 0.25s ease;
+}
+.logo-tile img {
+  max-height: 52px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.72;
+  transition: filter 0.25s ease, opacity 0.25s ease;
+}
+.logo-tile:hover {
+  border-color: var(--maroon);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.logo-tile:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+@media (max-width: 640px) {
+  .logo-grid { grid-template-columns: repeat(2, 1fr); }
+  .logo-tile { height: 76px; padding: 10px 14px; }
+  .logo-tile img { max-height: 40px; }
+}
 .feature-card:hover { border-color: var(--maroon); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 .feature-card .icon {
   width: 44px; height: 44px; border-radius: 10px;
@@ -1756,19 +1802,19 @@ details summary:hover { color: var(--maroon) !important; }
     <h2>Marquee Indian CSR teams &amp; foundations run on mGrant.</h2>
     <p class="lede">40+ donor organisations already use mGrant for their grant lifecycle — from corporate CSR to philanthropic foundations.</p>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 36px;">
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">HDFC Bank</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">Godrej</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">Axis Bank Foundation</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">Mahindra</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">Amazon</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">Vedanta Limited</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">Jindal Stainless</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">ReNew CSR</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">Welspun Group CSR</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">ICICI Foundation</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">Bajaj Finserv</div>
-      <div style="padding: 24px 18px; background: #fff; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.3px; transition: all 0.2s;" onmouseover="this.style.borderColor='#8B1A1A';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)'">Bajaj Auto</div>
+    <div class="logo-grid">
+      <div class="logo-tile"><img src="assets/logos/hdfc.png" alt="HDFC Bank"></div>
+      <div class="logo-tile"><img src="assets/logos/godrej.png" alt="Godrej"></div>
+      <div class="logo-tile"><img src="assets/logos/axis-bank.jpg" alt="Axis Bank Foundation"></div>
+      <div class="logo-tile"><img src="assets/logos/vedanta.png" alt="Vedanta Foundation"></div>
+      <div class="logo-tile"><img src="assets/logos/jsl.png" alt="JSL · Jindal Stainless"></div>
+      <div class="logo-tile"><img src="assets/logos/renew.jpg" alt="ReNew"></div>
+      <div class="logo-tile"><img src="assets/logos/icici-foundation.png" alt="ICICI Foundation"></div>
+      <div class="logo-tile"><img src="assets/logos/bajaj-finserv.jpg" alt="Bajaj Finserv"></div>
+      <div class="logo-tile"><img src="assets/logos/bajaj-auto.png" alt="Bajaj"></div>
+      <div class="logo-tile"><img src="assets/logos/edelgive.jpg" alt="EdelGive Foundation"></div>
+      <div class="logo-tile"><img src="assets/logos/sun-pharma.jpg" alt="Sun Pharma"></div>
+      <div class="logo-tile"><img src="assets/logos/hyundai.jpg" alt="Hyundai Motor India Foundation"></div>
     </div>
     <p style="text-align: center; margin-top: 20px; font-size: 13px; color: var(--muted); font-style: italic;">A sample of mGrant's client roster. Full list shared in direct conversation.</p>
   </div>
